@@ -1,0 +1,176 @@
+body {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  font-family: "Kaushan Script", cursive;
+  font-family: "Lobster Two", cursive;
+  font-family: "Patua One", cursive;
+}
+/*hearder design*/
+.nav {
+  background-color: #283618;
+  padding: 0 50px 0px 50px;
+  box-sizing: border-box;
+  width: 100%;
+  height: 15vh;
+  position: relative;
+  display: flex;
+}
+
+.logo {
+  color: #fefae0;
+  font-family: "Kaushan Script", cursive;
+  position: absolute;
+  width: 20%;
+  top: 30%;
+  float: left;
+}
+.logoCapital {
+  font-style: bolder;
+  font-size: 40px;
+  font-weight: 800px;
+  font-family: Inter;
+  margin: 0;
+}
+.searchBar {
+  height: 45px;
+  background-color: #fefae0;
+  left: 50%;
+  top: 50%;
+  width: 40%;
+  position: relative;
+  border-radius: 40px;
+  justify-content: center;
+  transform: translate(-50%, -50%);
+  display: flex;
+}
+.searchInput {
+  background-color: #fefae0;
+  width: 82%;
+  height: 95%;
+  margin-left: 15px;
+  padding: 0px;
+  border: none;
+}
+
+.searchBtn {
+  border: none;
+  background-color: #fefae0;
+  padding: 0px;
+  height: 45px;
+  margin-left: 20px;
+  border-radius: 5px 20px 20px 5px;
+}
+.searchImg {
+  width: 90%;
+  height: 45px;
+  margin: 0px;
+}
+.searchImg:hover {
+  opacity: 0.8;
+}
+.searchInput {
+  outline: none;
+  caret-color: #7c7979;
+  font-size: 18px;
+  line-height: 20px;
+}
+.searchInput::placeholder {
+  font-size: 17px;
+  opacity: 0.4;
+}
+/* main body */
+.main {
+  display: flex;
+}
+.firstMain {
+  width: 33vw;
+  height: 85vh;
+  background-color: #b2c186;
+  position: relative;
+  align-items: center;
+}
+.dateTime {
+  width: 95%;
+  color: #283618;
+  height: 10%;
+}
+.date {
+  width: 50%;
+  float: left;
+}
+.time {
+  width: 15%;
+  float: right;
+}
+.temp {
+  text-align: center;
+}
+.todaysWeather {
+  color: #fefae0;
+  padding: 5%;
+}
+.Degree {
+  font-size: 80px;
+}
+.lowerCase {
+  font-size: 12px;
+}
+.secMain {
+  float: left;
+  background-color: #fefae0;
+  width: 72vw;
+}
+.temp {
+  height: 42%;
+  background-color: #283618;
+}
+@media (max-width: 768px) {
+  .nav {
+    height: 30vh;
+    display: grid;
+    place-items: center;
+  }
+  .logo {
+    transform: translate(0%, 50%);
+    position: initial;
+  }
+  .searchBar {
+    position: initial;
+    margin-top: 45px;
+    transform: translate(0%, -50%);
+    width: 70%;
+  }
+  .firstMain {
+    width: 50vw;
+  }
+}
+@media (max-width: 550px) {
+  .nav {
+    height: 15vh;
+    position: relative;
+    display: flex;
+    padding: 0 10px 0px 20px;
+  }
+  .logo {
+    float: left;
+    width: 25%;
+    top: 30%;
+    position: absolute;
+  }
+  .logoCapital {
+    font-style: bolder;
+    font-size: 25px;
+    font-weight: 80px;
+    font-family: Inter;
+    margin: 0;
+  }
+  .searchBar {
+    height: 45px;
+    background-color: #fefae0;
+    left: 50%;
+    top: 10%;
+    width: 40%;
+    float: right;
+    position: absolute;
+  }
+}

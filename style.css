@@ -1,17 +1,19 @@
 body {
   margin: 0;
+  max-height: 400px;
   font-family: "Inter", sans-serif;
   font-family: "Kaushan Script", cursive;
   font-family: "Lobster Two", cursive;
   font-family: "Patua One", cursive;
 }
+
 /*hearder design*/
 .nav {
   background-color: #283618;
   padding: 0 50px 0px 50px;
   box-sizing: border-box;
   width: 100%;
-  height: 15vh;
+  height: 13vh;
   position: relative;
   display: flex;
 }
@@ -78,32 +80,36 @@ body {
   font-size: 17px;
   opacity: 0.4;
 }
-/* main body */
+.humbugerMenu {
+  display: none;
+}
+/* main body FirstMain*/
 .main {
   display: flex;
 }
 .firstMain {
   width: 33vw;
-  height: 85vh;
+  height: 100vh;
   background-color: #b2c186;
+  /* background-color: linear-gradient(135deg#b2c186, #ffff);
+  backdrop-filter: blur(10px
+  -webkit-backdrop-filter: blur(10px);*/
   position: relative;
   align-items: center;
+  padding: 0px 10px 0px 10px;
 }
 .dateTime {
   width: 95%;
   color: #283618;
-  height: 10%;
+  height: 8%;
 }
 .date {
-  width: 50%;
+  width: 60%;
   float: left;
 }
 .time {
   width: 15%;
   float: right;
-}
-.temp {
-  text-align: center;
 }
 .todaysWeather {
   color: #fefae0;
@@ -115,16 +121,238 @@ body {
 .lowerCase {
   font-size: 12px;
 }
+
+.temp {
+  height: 33%;
+  text-align: center;
+  background-color: #283618;
+  border-radius: 10px;
+}
+.humAndPre {
+  width: 100%;
+  background-color: #ffffff;
+  height: 13%;
+  margin-top: 18px;
+  display: flex;
+  border-radius: 18px;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.humidityAndPressure {
+  width: 30px;
+  height: 30px;
+  margin-right: 0px;
+  padding: 0px;
+}
+.humLable {
+  color: #b2c186;
+  font-size: 17px;
+}
+#lableNo {
+  color: #283618;
+}
+
+/* -----sunrise animation------*/
+
+.sunRise {
+  margin-top: 20px;
+  width: 100%;
+  height: 38%;
+  display: flex;
+  justify-content: center;
+  border-radius: 15px;
+  overflow: hidden;
+  position: relative;
+  animation-iteration-count: infinite;
+  animation-duration: 5s;
+  animation: sky 5s infinite, circle 5s infinite;
+  background: radial-gradient(
+    ellipse at bottom,
+    hsl(17, 89%, 44%),
+    rgb(249, 161, 46),
+    rgb(238, 238, 68)
+  );
+}
+
+.sunMoon {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  animation-name: cricle;
+  animation-iteration-count: infinite;
+  position: relative;
+  animation-duration: 5s;
+  top: 80%;
+  background-color: #fcd14d;
+}
+/*sunrise: sun:E67451  sky:ebc89c
+early morning sun:fadb92  sky:abc0e3 
+afternoon sun:FBCB78  sky:87ceeb
+evening sun:FFE8C6 sky:#0c1445, #4c408e, #5c54a4, #38285c.
+evening moon:7908 sky:
+night moon:#f6f1d5	sky:#0c1445, #4c408e, #5c54a4, #38285c.*/
+@keyframes cricle {
+  0% {
+    /*sunRise*/
+    top: 80%;
+    background: #e67451;
+    filter: drop-shadow(10px 10px 250px rgb(2, 0, 0));
+  }
+  15% {
+    /*early morning*/
+    top: 60%;
+    filter: drop-shadow(10px 10px 250px rgb(44, 1, 1));
+    background-color: #fadb92;
+  }
+  25% {
+    background-color: #fbcb78;
+    top: 30%;
+    filter: drop-shadow(10px 10px 150px red);
+  }
+  50% {
+    background-color: #f99e16;
+    filter: drop-shadow(10px 10px 100vw rgb(255, 0, 0));
+    top: 0%;
+  }
+  60% {
+    /*early evening*/
+    background-color: #f6f1d5;
+    top: 50%;
+  }
+  70% {
+    /*sun to moon transition*/
+    background-color: #f6f1d5;
+    top: 80%;
+  }
+  80% {
+    /*moon light */
+    background-color: #f6f1d5;
+    filter: blur(yellow);
+    top: 50px;
+  }
+  100% {
+    /*moon light */
+    background-color: #f6f1d5;
+    filter: blur(yellow);
+    top: 0px;
+  }
+}
+@keyframes sky {
+  0% {
+    /*sun Rise*/
+    background: radial-gradient(
+      ellipse at bottom,
+      hsl(17, 89%, 44%),
+      rgb(249, 161, 46),
+      rgb(238, 238, 68)
+    );
+  }
+
+  15% {
+    /*early morning*/
+    background: radial-gradient(
+      ellipse at bottom,
+      hsl(17, 89%, 44%),
+      rgb(249, 161, 46),
+      rgb(183, 235, 239)
+    );
+  }
+
+  25% {
+    /*Afternoon*/
+    background: radial-gradient(
+      at 50% 50%,
+      hsl(0, 0%, 98%),
+      rgb(67, 183, 250),
+      rgb(183, 235, 239)
+    );
+  }
+  50% {
+    background: radial-gradient(
+      at 80% 50%,
+      hsl(0, 0%, 98%),
+      rgb(67, 183, 250),
+      rgb(183, 235, 239)
+    );
+  }
+  60% {
+    /*early evening*/
+    background: radial-gradient(
+      at 80% 50%,
+      hsl(0, 0%, 98%),
+      rgb(67, 183, 250),
+      rgb(183, 235, 239)
+    );
+    /*night moon:#a6b5c5	sky:#0c1445, #4c408e, #5c54a4, #38285c.*/
+  }
+  70% {
+    /*sun to moon transition*/
+    background: radial-gradient(
+      ellipse at bottom,
+      #050f61,
+      #271781,
+      #3c6bac,
+      #bdd2f0
+    );
+  }
+  80% {
+    /*sun to moon transition*/
+    background: radial-gradient(at 50% 50%, #0b145d, #070940, #080434, #000205);
+  }
+  100% {
+    background: radial-gradient(at 50% 50%, #0b145d, #070940, #080434, #000205);
+  }
+}
+/*SecMain*/
 .secMain {
   float: left;
-  background-color: #fefae0;
   width: 72vw;
+  height: 100vh;
+  background-image: url(images/bgFinal.png);
+  background-size: cover;
 }
-.temp {
-  height: 42%;
+.Card {
+  justify-content: space-evenly;
+  display: flex;
+  margin: 40px 30px 40px 30px;
+  opacity: 0.8;
+  gap: 10px;
+}
+.card {
+  width: 170px;
+  height: 190px;
   background-color: #283618;
+  border-radius: 10px;
+  color: #fefae0;
+  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
-@media (max-width: 768px) {
+#cardImg {
+  width: 80px;
+  height: 80px;
+}
+/*----line graph----*/
+#lineGraph {
+  margin: 20px auto;
+  border: 2px solid #fff;
+  width: 500px !important;
+  height: 300px !important;
+  border-radius: 20px;
+  box-sizing: border-box;
+}
+.graphBox {
+  background-color: rgba(192, 192, 192, 0.2);
+  margin: 20px auto;
+  border-radius: 20px;
+  width: 500px;
+}
+/*-----------tab view ------------------*/
+
+@media (max-width: 780px) {
   .nav {
     height: 30vh;
     display: grid;
@@ -143,18 +371,45 @@ body {
   .firstMain {
     width: 50vw;
   }
+  .humLable {
+    font-size: 13px;
+  }
+  .time {
+    width: 25%;
+  }
+  .date {
+    width: 75%;
+  }
+  .humidityAndPressure {
+    width: 20px;
+    height: 20px;
+  }
+  .Card {
+    margin: 30px 20px 30px 20px;
+    gap: 10px;
+  }
+  .card {
+    width: 120px;
+    height: 150px;
+    background-color: #283618;
+    border-radius: 10px;
+  }
 }
-@media (max-width: 550px) {
+
+/**************Mobile view***********************/
+
+@media (max-width: 560px) {
   .nav {
-    height: 15vh;
+    height: 13vh;
     position: relative;
     display: flex;
-    padding: 0 10px 0px 20px;
+    padding: 0 20px 0px 20px;
+    width: 100vw;
   }
   .logo {
     float: left;
     width: 25%;
-    top: 30%;
+    top: 10%;
     position: absolute;
   }
   .logoCapital {
@@ -165,12 +420,70 @@ body {
     margin: 0;
   }
   .searchBar {
-    height: 45px;
-    background-color: #fefae0;
-    left: 50%;
-    top: 10%;
-    width: 40%;
-    float: right;
+    display: none;
+  }
+  .humbugerMenu {
+    display: initial;
     position: absolute;
+    left: 87%;
+  }
+  .main {
+    display: inline;
+  }
+  .firstMain {
+    width: 96vw;
+    height: 600px;
+  }
+
+  .temp {
+    height: 40%;
+    margin: 20px;
+    border-radius: 450px;
+  }
+  .humAndPre {
+    width: 80%;
+    margin: 50px 20px 20px 50px;
+  }
+  .sunRise {
+    height: 25%;
+    width: 80%;
+    margin: 50px 0px 0px 50px;
+  }
+  .todaysWeather {
+    padding: 50px;
+  }
+  .humLable {
+    font-size: 18px;
+  }
+  .humidityAndPressure {
+    width: 50px;
+    height: 50px;
+  }
+  .secMain {
+    float: none;
+    width: 100vw;
+    height: 230vh;
+    background-image: url(images/bgphone.png);
+  }
+  .Card {
+    display: initial;
+  }
+  .card {
+    width: 280px;
+    height: 280px;
+    margin: 30px auto;
+  }
+  #lineGraph {
+    margin: 10px auto;
+    border: 2px solid #fff;
+    width: 350px !important;
+    height: 200px !important;
+    border-radius: 10px;
+  }
+  .graphBox {
+    background-color: rgba(192, 192, 192, 0.2);
+    margin: 10px auto;
+    border-radius: 20px;
+    width: 350px;
   }
 }

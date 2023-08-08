@@ -30,6 +30,9 @@
                 <img class="searchImg" src="images/searchIcon.svg" alt="icon">
             </button>
         </form>
+        <div class="humbugerMenu">
+            <img src="images/humburger.png" alt="menu" class="menu">
+        </div>
     </header>
     <div class="main">
         <section class="firstMain">
@@ -44,15 +47,44 @@
                     <span class="lowerCase">feels like 30°</span><br>Bangalore
                 </p>
             </div>
-            <div class="tempExtra">
+            <div class="humAndPre">
+                <img class="humidityAndPressure" id="humidity" src="images/humidity.png" alt="humidity Icon">
+                <div class="humLable">Humidity<br>
+                    <span id="lableNo">
+                        82% </span>
+                </div>
+                <img class="humidityAndPressure" id="pressure" src="images/pressure.png" alt="humidity Icon">
+                <div class="humLable">
+                    Pressure<br>
+                    <span id="lableNo">720hpa
+                    </span>
+                </div>
+            </div>
+            <div class="sunRise">
+                <div class="sunMoon"></div>
             </div>
         </section>
         <section class="secMain">
+            <div class="Card">
+                <div class="card speed">Wind Speed<img id="cardImg" src=" images/Wind.png" alt="Wind Image">
+                    12Km/h </div>
+                <div class="card uv">UV Index<img id="cardImg" src="images/Rays.png" alt="UV Ray Image">
+                    2,3</div>
+                <div class="card rain">Rain Changes<img id="cardImg" src="images/Rain.png" alt="Rain Image">
+                    30%</div>
+            </div>
+            <div class="graphBox">
+                <canvas id="lineGraph">Your browser does not support canvas
+                    rendering.</canvas>
+            </div>
         </section>
+
     </div>
 </body>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"></script>
+<script src=" https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
 <script src="index.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
 
 </html>
